@@ -8,6 +8,8 @@ public class App {
 	m.setRatings(8);
 	m.setSummery("Action");
 	
-	new JDBCImpl().save(m);
+    //	new JDBCImpl().save(m);
+	JDBCImpl db=new JDBCImpl();
+	System.out.println(db.getMovie(1));
 }
 }
