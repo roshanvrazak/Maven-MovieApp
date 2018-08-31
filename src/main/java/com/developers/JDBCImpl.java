@@ -21,7 +21,7 @@ public class JDBCImpl {
 			pstmt.setInt(1, m.getId());
 			pstmt.setString(2, m.getName());
 			pstmt.setString(3, m.getSummery());
-			pstmt.setInt(4, m.getRatings());
+			pstmt.setInt(4, m.getRating());
 
 			int count = pstmt.executeUpdate();
 			if (count > 0) {
@@ -70,7 +70,7 @@ public class JDBCImpl {
 				m.setId(rs.getInt("movie_id"));
 				m.setName(rs.getString("movie_name"));
 				m.setSummery(rs.getString("movie_summery"));
-				m.setRatings(rs.getInt("movie_rating"));
+				m.setRating(rs.getInt("movie_rating"));
 			}
 
 		} catch (Exception e) {

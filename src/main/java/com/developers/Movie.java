@@ -1,17 +1,32 @@
 package com.developers;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "movies_info")
 public class Movie {
-	private int id;
+// Hibernate Movie Code
+	@Id
+	@Column(name = "movie_id")
+	private int movie_id;
+
+	@Column(name = "movie_name")
 	private String name;
+	@Column(name = "movie_summery")
 	private String summery;
-	private int ratings;
+	@Column(name = "movie_rating")
+	private int rating;
 
 	public int getId() {
-		return id;
+		return movie_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.movie_id = id;
 	}
 
 	public String getName() {
@@ -30,17 +45,17 @@ public class Movie {
 		this.summery = summery;
 	}
 
-	public int getRatings() {
-		return ratings;
+	public int getRating() {
+		return rating;
 	}
 
-	public void setRatings(int ratings) {
-		this.ratings = ratings;
+	public void setRating(int rating) {
+		this.rating = rating;
 	}
 
 	@Override
 	public String toString() {
-		return "Movie [id=" + id + ", name=" + name + ", summery=" + summery + ", ratings=" + ratings + "]";
+		return "Movie [id=" + movie_id + ", name=" + name + ", summery=" + summery + ", rating=" + rating + "]";
 	}
 
 }
