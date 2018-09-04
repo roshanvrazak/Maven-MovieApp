@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "movies_info")
 public class Movie {
-// Hibernate Movie Code
+	// Hibernate Movie Code
 	@Id
 	@Column(name = "movie_id")
 	private int movie_id;
